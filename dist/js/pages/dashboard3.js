@@ -16,17 +16,17 @@ $(function () {
   var salesChart = new Chart($salesChart, {
     type: 'bar',
     data: {
-      labels: ['JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+      labels: ['JAN','FEB','MAR','APR','MAY','JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
       datasets: [
         {
-          backgroundColor: '#007bff',
-          borderColor: '#007bff',
-          data: [1000, 2000, 3000, 2500, 2700, 2500, 3000]
+          backgroundColor: '#28A745',
+          borderColor: '#28A745',
+          data: [1000000,1000000,1000000,1000000,1000000,1000000, 2000000, 3000000, 2500000, 2700000, 2500000, 3000000]
         },
         {
           backgroundColor: '#ced4da',
           borderColor: '#ced4da',
-          data: [700, 1700, 2700, 2000, 1800, 1500, 2000]
+          data: [0,0,0,0,0,700000, 1700000, 2700000, 2000000, 1800000, 1500000, 2000000]
         }
       ]
     },
@@ -57,12 +57,11 @@ $(function () {
 
             // Include a dollar sign in the ticks
             callback: function (value) {
-              if (value >= 1000) {
-                value /= 1000
-                value += 'k'
-              }
+              // if (value >= 1000) {
+              //   value /= 1000
+              // }
 
-              return '$' + value
+              return 'Rp ' + value
             }
           }, ticksStyle)
         }],
